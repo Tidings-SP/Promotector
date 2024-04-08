@@ -11,9 +11,23 @@ import { DividerHorizontalIcon } from "@radix-ui/react-icons";
 import { collection, and, where, onSnapshot, query } from "firebase/firestore";
 import { Check, ChevronsRightLeft } from "lucide-react";
 import { useEffect, useState } from "react";
-import { db } from "../authentication/firebase";
+import { auth, db } from "../authentication/firebase";
+import { useRouter } from "next/navigation";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function HomePage() {
+  const router = useRouter();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        router.push("/authentication/signin");
+      }
+    });
+
+    return () => unsubscribe();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const [unV, setUnV] = useState<{
     id: string,
     date: string,
@@ -67,7 +81,7 @@ export default function HomePage() {
       );
     });
 
-    return () => unsubscribe(); // Cleanup when the component unmounts
+    return () => unsubscribe(); 
   }, []);
   return (
     <div>
