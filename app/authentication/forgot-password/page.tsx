@@ -6,7 +6,6 @@ import { passSchema, registerSchema } from "../../validators/auth-validator"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Toaster } from "@/components/ui/toaster"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
 import {
   Card,
   CardContent,
@@ -17,18 +16,11 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { cn } from "@/lib/utils"
 import { useToast } from "@/components/ui/use-toast"
-import { easeInOut } from "framer-motion/dom"
-import { ModeToggle } from "@/components/ui/toggle-mode"
+
 import { useRouter } from 'next/navigation'
 import { sendPasswordResetEmail } from "firebase/auth"
 import { auth } from "../firebase"
@@ -67,9 +59,8 @@ export default function ForgotPassword() {
   }
 
   return (
-    <main className="bg-[url('/img/Forgot.jpg')]">
-      <div className='flex min-h-screen items-center backdrop-brightness-50 ps-3 sm:ps-10'>
-        <Card className="w-[350px] absolute">
+    <main className="flex item-centre justify-center">
+        <Card className="w-[350px] mt-20">
           <CardHeader>
             <CardTitle>Forgot Password</CardTitle>
             <CardDescription>Get reset password link on your mail!</CardDescription>
@@ -113,7 +104,6 @@ export default function ForgotPassword() {
           </CardContent>
         </Card>
         <Toaster />
-      </div>
 
     </main>
 
