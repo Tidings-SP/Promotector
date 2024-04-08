@@ -18,8 +18,8 @@ export default function NavBar() {
         </h1>
         <div>
           <ul className="hidden sm:flex flex-row">
-            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Dashboard</a></li>
-            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Scam Dectector</a></li>
+            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
+            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="/detector">Scam Detector</a></li>
             <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Admin panel</a></li>
             <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Reports</a></li>
           </ul>
@@ -38,8 +38,8 @@ export default function NavBar() {
         <div className="sm:hidden gap-2">
           <div className=' m-4'>
             <ul className=" gap-4">
-              <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Dashboard</a></li>
-              <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Scam Dectector</a></li>
+              <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
+              <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="/detector">Scam Detector</a></li>
               <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Admin panel</a></li>
               <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Reports</a></li>
             </ul>
