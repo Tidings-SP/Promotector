@@ -92,6 +92,7 @@ export default function Register() {
                     await setDoc(doc(db, "user", auth.currentUser.uid), {
                         username: data.name,
                         useremail: data.email,
+                        access: false,
                       
                     });
 

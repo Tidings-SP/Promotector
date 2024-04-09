@@ -17,9 +17,10 @@ import {
 import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { redirect, useRouter } from 'next/navigation'
-import { signInWithEmailAndPassword } from "firebase/auth"
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../firebase"
 import { useToast } from "@/components/ui/use-toast"
+import { useEffect } from "react"
 
 
 
@@ -35,6 +36,16 @@ export default function Login() {
       password: "",
     },
   })
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/home");
+      }
+    });
+
+    return () => unsubscribe();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   function onSubmit(data: Input) {
     
