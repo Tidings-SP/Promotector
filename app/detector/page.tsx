@@ -91,6 +91,7 @@ export default function Detector() {
       setText(data)
 
     } catch (error) {
+      console.log(error)
       toast({
         title: "Error fetching result",
         variant: "destructive",
