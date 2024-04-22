@@ -40,8 +40,7 @@ export default function NavBar() {
           <ul className="hidden sm:flex flex-row">
             <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
             <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="/detector">Scam Detector</a></li>
-            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Admin panel</a></li>
-            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="">Reports</a></li>
+            <li className=" m-3 text-lg hover:border-b-2 border-blue-500"><a href="/admin">Admin panel</a></li>
           </ul>
         </div>
         <div className='hidden sm:flex justify-end items-center'>
@@ -67,7 +66,6 @@ export default function NavBar() {
               <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
               <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="/detector">Scam Detector</a></li>
               <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Admin panel</a></li>
-              <li className=" m-4 text-lg hover:border-b-2 border-blue-500"><a href="">Reports</a></li>
             </ul>
           </div>
 
