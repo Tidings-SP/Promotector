@@ -115,6 +115,17 @@ export default function PdAdmin() {
       request: false,
     });
   }
+
+  const sendid = async (link: string) => {
+    const res = await fetch('/api/mailer', {
+      method: "POST",
+      body: JSON.stringify({ link: link }),
+      headers: {
+        'content-type': 'application/json',
+      }
+    });
+  };
+
   return (
     <section className="p-4 m-2 ">
       {!verified ?
@@ -145,7 +156,10 @@ export default function PdAdmin() {
                 <Button
                   className="mt-2"
                   type="button"
-                  onClick={() => {verifyReel(r.id)}}
+                  onClick={() => {
+                    verifyReel(r.id)
+                    sendid(r.link)
+                  }}
                   variant={"secondary"}
                 >
                   <CheckCheck />
