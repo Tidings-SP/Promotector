@@ -18,12 +18,11 @@ export async function POST(request: Request) {
             to: 'arunm2020@psnacet.edu.in',
             subject: 'Report of Fake Content: Urgent Action Required',
             html: `
-            <p>I hope this email finds you well. I am writing to bring to your attention a concerning issue regarding a video/reel uploaded on your platform. Upon careful observation, it has come to my attention that the content in question appears to be fake and potentially harmful.
-            The dissemination of misinformation poses a significant threat to the integrity of your platform and its users. As a responsible member of your community, I urge you to take swift action to remove this content and investigate its origins to prevent further dissemination of misleading information.
-            I have attached the link of the reel of the fake content Link:<strong>${data.link}</strong>.
+            <p>I hope this message finds you well. I am reaching out to report a concerning issue regarding a fake promotion that has been circulating on your platform. Upon careful observation, it has come to my attention that there is a promotion being advertised that appears to be misleading and potentially harmful to your users.
+            I have attached the link of the fake content Link:<strong>${data.link}</strong>.
             Thank you for your commitment to maintaining a safe and trustworthy environment for all users.
             </p>
-          <br>
+           <br>
            <p> 
             Sincerely,
             <br>
