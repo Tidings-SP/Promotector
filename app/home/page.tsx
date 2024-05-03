@@ -25,7 +25,7 @@ export default function HomePage() {
     });
 
     return () => unsubscribe();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const [unV, setUnV] = useState<{
@@ -81,15 +81,15 @@ export default function HomePage() {
       );
     });
 
-    return () => unsubscribe(); 
+    return () => unsubscribe();
   }, []);
   return (
     <div>
-       <div>
+      <div>
         <h1 className=" text-xl font-bold p-5">Verified videos </h1>
         <h1 className="px-8">Presence of fake content is verified with human intelligence</h1>
         {v.map((item) => (
-          <Card key={item.id} className="flex flex-col sm:flex-row m-6 border-blue-300  ">
+          <Card key={item.id} className="flex flex-col overflow-hidden sm:flex-row m-6 border-blue-300  ">
             <CardFooter className="flex flex-col p-4 sm:w-[40%] ">
               <img className="object-cover rounded-lg " src="https://www.internetmatters.org/wp-content/uploads/2020/08/https___specials-images.forbesimg.com_imageserve_5f2b4c9efc3ed7b0659d27ae_0x0.jpg" alt="" />
             </CardFooter>
@@ -108,7 +108,7 @@ export default function HomePage() {
       <div>
         <h1 className=" text-xl font-bold p-5">Un-Verified videos </h1>
         {unV.map((item) => (
-          <Card key={item.id} className=" flex flex-col sm:flex-row m-6 border-blue-300">
+          <Card key={item.id} className=" flex flex-col overflow-hidden sm:flex-row m-6 border-blue-300">
             <CardFooter className="flex flex-col p-4 sm:w-[40%] ">
               <img className="object-cover rounded-lg" src="https://www.internetmatters.org/wp-content/uploads/2020/08/https___specials-images.forbesimg.com_imageserve_5f2b4c9efc3ed7b0659d27ae_0x0.jpg" alt="" />
             </CardFooter>
@@ -124,7 +124,7 @@ export default function HomePage() {
         ))}
 
       </div>
-     
+
     </div>
 
   )
